@@ -28,3 +28,9 @@ $ ssh -i <KEY.pem> ubuntu@<SERVER_IP> "cd /home/ubuntu/app/restapi;./start.sh"
 $ ssh -i <KEY.pem> ubuntu@<SERVER_IP> "cd/home/ubuntu/app/restapi;./stop.sh"
 ```
 
+## Dockerizing
+- https://spring.io/guides/gs/spring-boot-docker
+- openJDK 17
+```bash
+
+```
