@@ -28,3 +28,17 @@ $ ssh -i <KEY.pem> ubuntu@<SERVER_IP> "cd /home/ubuntu/app/restapi;./start.sh"
 $ ssh -i <KEY.pem> ubuntu@<SERVER_IP> "cd/home/ubuntu/app/restapi;./stop.sh"
 ```
 
+## Dockerizing
+- https://spring.io/guides/gs/spring-boot-docker
+- openJDK 17
+```bash
+# 빌드
+$ ./gradlew clean bootJar
+$ sudo docker build --build-arg JAR_FILE=build/libs/\*.jar -t gnp19/restapi:0.3.0 .
+
+$ sudo docker images | grep restapi
+gnp19/restapi       0.3.0           ab8eb6893b73   About a minute ago   347MB
+$ sudo docker push gnp19/restapi:0.3.0
+
+$ sudo docker status
+```
